@@ -1,4 +1,0 @@
-    #ping
-    @bot.command()                                     #從command裡面調用
-    async def ping(ctx):                               #ping代表用ping來觸發指令  #ctx表示用上下文回傳
-        await ctx.send(f"{round(self.bot.latency*1000)}(ms)")    #round用來小數點後4捨5入
