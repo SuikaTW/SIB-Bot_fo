@@ -1,0 +1,11 @@
+#成員加入
+@bot.event
+async def on_member_join(member):                 #觸發on_member_join的事件
+    channel = bot.get_channel(int(jdata['member_join']))   #channel的變數 #jdata回傳的資料是字串型態 須強制轉換成數字
+    await channel.send(f"{member} 進來ㄌ!") 
+
+#成員離開
+@bot.event
+async def on_member_remove(member):                 #觸發on_member_remove的事件
+    channel = bot.get_channel(int(jdata['member_leave']))  #channel的變數 #jdata回傳的資料是字串型態 須強制轉換成數字
+    await channel.send(f"{member} 離開ㄌ!")
